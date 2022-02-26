@@ -1,4 +1,211 @@
+/*------ Overall Stylings ------*/
 .app__navbar{
-    background-color: var(--background);
-    height: 80px;
+    width: 100%;
+    height: 60px;
+
+    background-color: var(--background-navbar);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+
+    backdrop-filter: blur(4px);
+    --webkit-backdrop-filter: blur(4px);
+
+    position: fixed;
+    z-index: 2;
+
+    transition: all .75s ease-in-out;
 }
+
+
+/*------ Logo Stylings ------*/
+.app__navbar-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 1rem;
+    cursor: pointer;
+    width: 25%;
+
+    a{
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+
+
+/*------ Mode Toggle Stylings ------*/
+.app__navbar-switch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 1rem;
+    width: 25%;
+
+    @media screen and (max-width: 900px) {
+        display: none; 
+    }
+    
+
+}
+
+
+/*------ Navigaton Stylings Big Screens ------*/
+.app__navbar-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+     
+    li{
+        cursor: pointer;
+        flex-direction: column;
+        margin: 0 1rem; 
+
+        div{
+            width: 5px;
+            height: 5px;
+            background: transparent;
+            border-radius: 50%;
+            margin-bottom: 5px;
+        }
+
+        a{
+            color: var(--text-primary);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 500;
+            
+            transition: all .3s ease-in-out;
+
+            &:hover{
+                color: var(--text-hover);
+            }
+        }
+
+        &:hover{
+            div{
+                background-color: var(--text-hover);
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        display: none;
+    }
+    
+}
+
+
+/*------ Navigaton Stylings Small Screens ------*/
+.app__navbar-menu{
+    width: 35px;
+    height: 35px;
+    border-radius: 60%;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 1rem;
+
+    background-color: var(--background);
+
+    
+    svg{
+        display: flex;
+        width: 70%;
+        height: 70%;
+        color: var(--text-primary);
+        cursor: pointer;
+    }
+
+    .inactive{
+        display: none; 
+    }
+
+    div{
+        position: fixed;
+        top: 65px;
+        bottom: 0;
+        right: .5rem;
+        z-index: 3;
+
+        width: 50%;
+        height: calc(100vh - 72px);
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+        background-color: var(--background-navbar);
+
+        border-radius: 15px;
+        box-shadow: 0 0 30px rgba(168,168,168,0.75);
+
+        transition: all .75s ease-in-out;
+        animation-name: slider;
+        animation-duration: .3s;
+
+        svg{
+            width: 35px;
+            height: 35px;
+            color: var(--text-primary);
+            cursor: pointer;  
+        }
+
+        ul{ 
+            
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 5rem;
+            
+
+            li{
+
+                margin-bottom: 1rem;
+
+                a{
+                    color: var(--text-primary);
+                    text-decoration: none;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    transition: all .3s ease-in-out;
+
+                    &:hover{
+                        color: var(--text-hover);
+                    }
+                }
+            }
+        }    
+    }
+
+    @media screen and (min-width: 900px) {
+        display: none;
+    }
+}
+
+
+/*------ Animations ------*/
+@keyframes slider {
+    0%{
+     right: -50%; 
+    }
+    100%{
+        right: .5rem;
+    }    
+}
+
