@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
+import  { About, Contact, Files, Header, Resume, Testimonial } from './container';
+import { Navbar, Toggle } from './components'
+import './App.scss';
+
+
+const App = () => {
+  const [theme, setTheme] = Toggle();
+
+  const switchTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme); 
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app" data-theme={theme}>
+      <Navbar switchTheme = {switchTheme}/>
+      {/* <Header />
+      <About />
+      <Resume />
+      <Files />
+      <Testimonial />
+      <Contact /> */}
     </div>
   );
 }
 
-export default App;
+export default App
