@@ -98,7 +98,7 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background-color: var(--text-primary);
+      background-color: var(--background);
       margin: 0.25rem 0;
       border: 1px solid var(--text-primary);
   
@@ -107,6 +107,7 @@
       align-items: center;
   
       transition: all 0.3s ease-in-out;
+      cursor: pointer;
   
       svg {
         width: 15px;
@@ -115,11 +116,11 @@
       }
   
       &:hover {
-        background-color: var(--text-secondary);
-        border-color: var(--text-secondary);
+        background-color: var(--text-primary);
+        border-color: var(--text-primary);
   
         svg {
-          color: var(--text-secondary);
+          color: var(--text-hover);
         }
       }
   
@@ -149,10 +150,10 @@
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background-color: #cbcbcb;
-      margin: 0.5rem;
+      background-color: var(--text-primary);
+      margin: .5rem;
   
-      transition: background-color 0.2s ease-in-out;
+      transition: background-color 0.3s ease-in-out;
   
       &:hover {
         background-color: var(--text-secondary);
