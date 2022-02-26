@@ -21,7 +21,7 @@ const Navbar = ({switchTheme}) => {
             <ul className="app__navbar-links">
                 {['home', 'about', 'resume', 'files', 'testimonials', 'contact'].map((item) => (
                     <li className="app__flex p-text" key={`link-${item}`}>
-                        <div></div>
+                        <div/>
                         <a href={`#${item}`}>{item}</a>
                     </li>
                 ))}
