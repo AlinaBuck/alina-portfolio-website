@@ -28,6 +28,11 @@
         text-decoration: none;
         text-transform: uppercase;
     }
+
+    @media screen and (max-width: 280px) {
+        margin-left: 2.5rem;
+        
+    }
 }
 
 
@@ -100,7 +105,7 @@
 .app__navbar-menu{
     width: 35px;
     height: 35px;
-    border-radius: 60%;
+    border-radius: 50%;
 
     position: relative;
 
@@ -110,7 +115,7 @@
 
     margin-right: 1rem;
 
-    background-color: var(--background);
+    background-color: var(--background-switch);
 
     
     svg{
@@ -140,7 +145,7 @@
         align-items: center;
         flex-direction: column;
 
-        background-color: var(--background-navbar);
+        background-color: var(--background-switch);
 
         border-radius: 15px;
         box-shadow: 0 0 30px rgba(168,168,168,0.75);

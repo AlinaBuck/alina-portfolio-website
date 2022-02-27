@@ -1,0 +1,283 @@
+/*------ Overall Styling ------*/
+.app__header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+
+    height: 100vh;
+    width: 100%;
+
+    
+
+    @media screen and(min-width: 2000px) {
+        padding-top: 8rem;
+    }
+
+    @media screen and(max-width: 1200px) {
+        flex-direction: column;
+    }
+
+    @media  screen and (max-width: 570px) {
+        width: 100vw;
+        
+    }
+   
+}
+
+.app__social{
+    display: none !important;
+}
+
+
+/*------ Badges Left Styling ------*/
+.app__header-info{
+    flex: .75;
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;
+
+    @media screen and(max-width: 1200px) {
+       flex: .35;
+    }
+
+}
+
+.app__header-badge{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    .badge, .tag{
+        padding: 1rem 2rem;
+        border-radius: 15px;
+        flex-direction: row;
+        width: auto;
+        background-color: var(--background-navbar);
+        box-shadow: 0 0 10px var(--shadow-primary);
+
+        p{
+            font-size: .75rem;
+            font-weight: 500;
+        }
+    }
+
+    .tag{
+        flex-direction: column;
+        margin-top: 3rem;
+
+        p{
+            width: 100%;
+            text-transform: uppercase;
+            text-align: left;
+        }
+    }
+
+    span{
+        font-size: 2.5rem;
+
+        @media screen and (min-width: 2000px) {
+            font-size: 5rem;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .tag{
+            margin-left: 5rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    @media screen and (max-width: 570px) {
+
+        .tag{
+            margin-left: .5rem; 
+        }
+
+        .badge, .tag{
+
+            p{
+                font-size: .45rem;
+            }
+
+            span{
+                font-size: 1rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 280px) {
+
+        .badge, .tag{
+            width: 125px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span{
+                display: none;
+            }
+        }
+        
+    }
+
+    @media screen and (max-height: 850px) {
+        margin-top: 3rem;
+    }
+}
+
+
+/*------ Image Middle Styling ------*/
+.app__header-img{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    height: 100%;
+    position: relative;
+
+    img{
+        max-height: 90%;
+        max-width: 90%;
+        object-fit: contain;
+        z-index: 1;
+        margin-left: 4rem;
+
+    }
+    @media screen and (max-width: 1200px) {
+        flex: .5;
+        min-height: 50%;
+        align-items: center;
+
+        img{
+            height: 100%;   
+        }
+    }
+}
+
+
+/*------ Circles Right Styling ------*/
+.app__header-circles{
+    flex: .75; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 100%;
+
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100px;
+        height: 100px;
+
+        border-radius: 50%;
+        background-color: var(--background);
+        box-shadow: 0 0 10px var(--shadow-primary);
+
+        img{
+            width: 60%;
+            height: 60%; 
+        }
+    }
+
+    div:nth-child(1){
+        margin-right: 4rem; 
+    }
+
+    div:nth-child(2){
+        width: 150px;
+        height: 150px;
+    }
+
+    div:nth-child(3){
+        margin-right: 5rem;
+        width: 70px;
+        height: 70px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+        flex: .15;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-right: 2rem;
+
+        div:nth-child(1){
+            margin-right: 0;
+            margin-bottom: 4rem; 
+        }
+    
+        div:nth-child(2){
+            width: 125px;
+            height: 125px;
+        }
+    
+        div:nth-child(3){
+            margin-right: 0;
+            margin-bottom: 6rem;
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    @media screen and (max-width: 570px) {
+        margin-right: 0;
+        div:nth-child(1){
+            margin-right: 0;
+            margin-bottom: 4rem;
+            width: 70px;
+            height: 70px; 
+        }
+    
+        div:nth-child(2){
+            width: 100px;
+            height: 100px;
+        }
+    
+        div:nth-child(3){
+            margin-right: 0;
+            margin-bottom: 6rem;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    @media screen and (max-width: 280px) {
+        margin-right: 0;
+        div:nth-child(1){
+            margin-right: 0;
+            margin-bottom: 4rem;
+            width: 50px;
+            height: 50px; 
+        }
+    
+        div:nth-child(2){
+            margin-bottom: 1rem;
+            width: 60px;
+            height: 60px;
+        }
+    
+        div:nth-child(3){
+            margin-right: 0;
+            margin-bottom: 6rem;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
