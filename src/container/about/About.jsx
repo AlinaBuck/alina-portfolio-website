@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import { abouts } from '../../data';
-import { images } from '../../constants';
 import './About.scss';
 
 
@@ -26,10 +25,10 @@ const About = () => {
             transition={{ duration: .5, type:'tween' }}
             key={about.title + index}
             className='app__card-item'
-          >
-            <h2 className='bold-text'>{about.title}</h2>
-            <p className="bold-text">{about.description}</p>
+          > 
             <img src={about.img} alt={about.title} />
+            <h1 className='app__card-item-text'>{about.title}</h1>
+            
           </motion.div>
         ))}
       </div>

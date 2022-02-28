@@ -2,18 +2,18 @@ import { images } from '../../constants';
 
 export const abouts = [
     {
-        title: 'My Origins',
+        title: 'Profile',
         description: 'Get To Know Me',
-        img: images.api,
+        img: images.darmsheim,
     },
     {
-        title: 'How I Work',
+        title: 'Motivation',
         description: 'Get To Know My Work Style',
-        img: images.api,
+        img: images.motivation,
     },
     {
-        title: 'My Hobbies',
+        title: 'Hobbies',
         description: 'Get To Know What I Do In My Spare Time',
-        img: images.api,
+        img: images.hobbies,
     }
 ]
