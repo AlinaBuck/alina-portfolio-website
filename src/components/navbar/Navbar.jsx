@@ -12,7 +12,7 @@ const Navbar = ({switchTheme}) => {
         <div className='app__navbar'>
 
             {/* Logo */}
-            <div className="app__navbar-logo app__flex">
+            <div className="app__navbar-logo">
                 <a href='#home' className='head-text'><span>A</span>LINA<span>.</span></a>
             </div>
             
@@ -20,7 +20,7 @@ const Navbar = ({switchTheme}) => {
             {/* Navigation on big screens */}
             <ul className="app__navbar-links">
                 {['home', 'about', 'resume', 'files', 'testimonials', 'contact'].map((item) => (
-                    <li className="app__flex p-text" key={`link-${item}`}>
+                    <li className='p-text' key={`link-${item}`}>
                         <div/>
                         <a href={`#${item}`}>{item}</a>
                     </li>

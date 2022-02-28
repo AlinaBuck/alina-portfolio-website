@@ -10,7 +10,7 @@
     position: fixed;
     z-index: 2;
 
-    transition: all .75s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 
@@ -63,6 +63,9 @@
      
     li{
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
         margin: 0 1rem; 
 
@@ -113,7 +116,7 @@
     justify-content: center;
     align-items: center;
 
-    margin-right: 1rem;
+    margin-right: .5rem;
 
     background-color: var(--background-switch);
 
@@ -150,7 +153,7 @@
         border-radius: 15px;
         box-shadow: 0 0 30px rgba(168,168,168,0.75);
 
-        transition: all .75s ease-in-out;
+        transition: all .3s ease-in-out;
         animation-name: slider;
         animation-duration: .3s;
 

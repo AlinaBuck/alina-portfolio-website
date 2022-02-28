@@ -17,8 +17,8 @@ const App = () => {
     <div className="app" data-theme={theme}>
       <Navbar switchTheme = {switchTheme}/>
       <Header />
-      {/* <About />
-      <Resume />
+      <About />
+      {/* <Resume />
       <Files />
       <Testimonial />
       <Contact /> */}
