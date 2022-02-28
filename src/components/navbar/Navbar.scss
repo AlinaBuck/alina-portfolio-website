@@ -26,7 +26,11 @@
 
     a{
         text-decoration: none;
-        text-transform: uppercase;
+        text-transform: uppercase;  
+    }
+
+    span{
+        transition: all .3s ease-in-out;
     }
 
     @media screen and (max-width: 280px) {

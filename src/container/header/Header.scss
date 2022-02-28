@@ -8,7 +8,7 @@
     height: 100vh;
     width: 100%;
 
-    
+    scroll-snap-align: start;
 
     @media screen and(min-width: 2000px) {
         padding-top: 8rem;
@@ -19,16 +19,10 @@
     }
 
     @media  screen and (max-width: 570px) {
-        width: 100vw;
-        
+        width: 100vw;  
     }
    
 }
-
-.app__social{
-    display: none !important;
-}
-
 
 /*------ Badges Left Styling ------*/
 .app__header-info{
@@ -52,7 +46,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+
     .badge, .tag{
         padding: 1rem 2rem;
         border-radius: 15px;
@@ -60,6 +54,8 @@
         width: auto;
         background-color: var(--background-navbar);
         box-shadow: 0 0 10px var(--shadow-primary);
+
+        transition: all .3s ease-in-out;
 
         p{
             font-size: .75rem;
@@ -205,6 +201,8 @@
         border-radius: 50%;
         background-color: var(--background);
         box-shadow: 0 0 10px var(--shadow-primary);
+
+        transition: all .3s ease-in-out;
 
         img{
             width: 60%;

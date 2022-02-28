@@ -1,6 +1,7 @@
 .app {
     background-color: var(--background);
     font-family: var(--font-base);
+    transition: all .5s ease-in-out;
   }
   
   .head-text {

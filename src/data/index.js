@@ -1,0 +1,1 @@
+export { abouts } from './about/Abouts';
