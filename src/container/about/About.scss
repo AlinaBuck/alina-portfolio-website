@@ -1,3 +1,4 @@
+/*------ Overall Styling ------*/
 .app__about{
     height: 100vh;
     width: 100vw;
@@ -13,14 +14,26 @@
         text-transform: uppercase;
     }
 
+
+    /*-- Width --*/
+    /*-- 570px --*/
     @media screen and (max-width: 570px) {
         h2{
             font-size: 23px;
             margin-bottom: 1rem;
         }
     }
+
+    /*-- Height --*/
+    /*-- 450px --*/
+    @media screen and (max-height: 450px) {
+        h2{
+            display: none;
+        }  
+    }
 }
 
+/*------ Overall Styling Card Container ------*/
 .app__cards{
     display: flex;
     justify-content: center;
@@ -30,6 +43,7 @@
     margin-top: 2rem;
 }
 
+/*------ Overall Styling Individual Cards ------*/
 .app__card-item{
     position: relative;
 
@@ -61,6 +75,7 @@
         height: 15%;
 
         text-align: center;
+        text-transform: uppercase;
         font-size: 20px;
         padding-top: 6px;
 
@@ -72,12 +87,17 @@
         color: var(--text-primary);
         z-index: 1;
 
+        transition: all .3s ease-in-out;
+
         &:hover{
             height: 20%;
             padding-top: 12px;
         }
     }
 
+
+    /*-- Width --*/
+    /*-- 570px --*/
     @media screen and (max-width: 570px) {
 
         width: 120px;
@@ -88,7 +108,7 @@
             font-size: 12px;
         }
     }
-
+    /*-- 280px --*/
     @media screen and (max-width: 280px) {
 
         width: 100px;
@@ -104,4 +124,195 @@
             font-size: 10px;
         }
     }
+
+    /*-- Height --*/
+    /*-- 540px --*/
+    @media screen and (max-height: 540px){
+        width: 120px;
+        height: 180px;
+
+        h1{
+            font-size: 12px;
+        }  
+    }
+    /*-- 375px --*/
+    @media screen and (max-height: 375px){
+        width: 120px;
+        height: 180px;
+
+        h1{
+            font-size: 12px;
+        }
+    }
+}
+
+/*------ Overall Styling Individual Description Cards ------*/
+.app__card-desc{
+    display: none;
+}
+
+.active{
+    position: absolute;
+    top: 25;
+    left: 25;
+
+    height: 50%;
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--background);
+    box-shadow: 0 0 15px var(--shadow-primary);
+    border-radius: 15px;
+    z-index: 5;
+
+
+    .app__card-title{
+        position: absolute;
+        left: 0;
+        
+        height: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-transform: uppercase;
+        writing-mode: vertical-rl;
+        font-size: 23px;
+
+        padding: .5rem; 
+
+        background-color: var(--background);
+        box-shadow: 0 0 15px var(--shadow-primary);
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
+
+        cursor: pointer;
+        color: var(--text-primary);
+
+        &:hover{
+            width: 10%;
+        } 
+        
+        /*-- Height --*/
+        /*-- 540px --*/
+        @media screen and (max-height: 540px){
+            font-size: 18px; 
+        }
+    }
+
+    .app__card-desc{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 50%;
+        color: var(--text-primary);
+
+        .app__card-desc-desc{
+            display: flex;
+            flex-direction: column;
+
+            width: 100%;
+            margin: 1rem; 
+
+            .app__card-desc-name{
+                color: var(--text-secondary);
+                font-weight: 700;
+            }
+
+            .app__card-desc-secondName{
+                margin-left: 1rem;
+                font-weight: 500;
+            }
+            
+            .app__card-desc-text{
+                margin-left: 1rem;
+            }
+
+            /*-- Width --*/
+            /*-- 280px --*/
+            @media screen and (max-width: 280px) {
+                font-size: 12px;  
+            }
+
+            /*-- Height --*/
+            /*-- 600px --*/
+            @media screen and (max-height: 600px){
+                font-size: 12px;
+                margin: .5rem;
+            }
+
+            /*-- 280px --*/
+            @media screen and (max-height: 280px){
+                margin: .2rem;
+            }
+
+        }
+
+    }
+
+    .app__card-close{
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 1rem;
+        cursor: pointer;
+        color: var(--text-secondary);
+    }
+
+
+    /*-- Width --*/
+    /*-- 1368px --*/
+    @media screen and (max-width: 1368px) {
+        height: 50%;
+        width: 88%; 
+    }
+    /*-- 768px --*/
+    @media screen and (max-width: 768px) {
+        width: 92%;  
+    }
+    /*-- 570px --*/
+    @media screen and (max-width: 570px) {
+        height: 62%;  
+    }
+    /*-- 425px --*/
+    @media screen and (max-width:425px){
+        height: 65%; 
+    }
+    /*-- 289px --*/
+    @media screen and (max-width:289px){
+        height: 60%; 
+    }
+
+    /*-- Height --*/
+    /*-- 450px --*/
+    @media screen and (max-height: 450px) {
+        height: 60%;
+        margin-top: .5rem;
+    }
+    /*-- 375px --*/
+    @media screen and (max-height: 375px) {
+        height: 70%;
+        margin-bottom: .25;   
+    }
+    /*-- 280px --*/
+    @media screen and (max-height: 280px){
+        margin-bottom: 0;
+        margin-top: 1.5rem;
+    }
+
+    /*-- Special Cases --*/
+    /*-- Surface Duo Unfolded Vertical --*/
+    @media screen and (width: 720px) and (height: 1114px) {
+        height: 60%;
+    }
+
+    /*-- Nest Hub --*/
+    @media screen and (width: 1024px) and (height:600px){
+        width: 70%;
+    }    
 }
