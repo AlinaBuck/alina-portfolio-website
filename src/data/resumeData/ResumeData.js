@@ -2,6 +2,61 @@ import { images } from '../../constants';
 
 export const resumeData = [
     {
+        img: images.arrow,
+        tag: ['overview'],
+
+        cardEven:[
+            {
+                date: 1996,
+                title: 'Birthday',
+            },
+            {
+                date: 2014,
+                title: 'Abi',
+            },
+            {
+                date: 2015,
+                title: 'Bachelor',
+            },
+            {
+                date: 2019,
+                title: 'BYU',
+            },
+            {
+                date: 2020,
+                title: 'Master',
+            },
+            {
+                date: 2022,
+                title: 'Fraunhofer',
+            },
+
+        ],
+
+        cardOdd:[
+            {
+                date: 2002,
+                title: 'School',
+            },
+            {
+                date: 2014,
+                title: 'Au Pair',
+            },
+            {
+                date: 2017,
+                title: 'HTP',
+            },
+            {
+                date: 2019,
+                title: 'Daimler',
+            },
+            {
+                date: 2021,
+                title: 'Bust',
+            },
+        ]
+    },
+    {
         title: 'Birthday!!!',
         company: 'https://www.youtube.com/watch?v=inS9gAgSENE',
         img: images.birth,
@@ -39,7 +94,7 @@ export const resumeData = [
         link: 'https://www.google.de/maps/place/Rotorua,+Neuseeland/@-38.1320775,176.1580314,11.04z/data=!4m5!3m4!1s0x6d6e983d82f6b22b:0x500ef6143a39931!8m2!3d-38.1445987!4d176.2377669?hl=de',
         subtitle: 'A year abroad',
         text: 'For a year I worked as an Au-Pair in the great country of New Zealand!',
-        tag: ['2014', '2015', 'highlights']
+        tag: ['2014', '2015']
     },
     {
         title: 'Bachelor Studies',
@@ -90,7 +145,7 @@ export const resumeData = [
         link: 'https://www.google.de/maps/place/Hochschule+Pforzheim/@48.8787457,8.7144089,17z/data=!3m1!4b1!4m5!3m4!1s0x479771e361c1c105:0xf080269e06186a53!8m2!3d48.8787422!4d8.7165976?hl=de',
         subtitle: 'First Academic Title!',
         text: 'My Thesis subject was: ...',
-        tag: ['2020', 'highlights']
+        tag: ['2020']
     },
     {
         title: 'Master',
@@ -120,7 +175,7 @@ export const resumeData = [
         link: 'https://www.google.de/maps/place/Fraunhofer-Venture/@48.1320776,11.5281156,17z/data=!4m12!1m6!3m5!1s0x479dd8a5ab00c693:0x260c06a93a573a7a!2sFraunhofer-Einrichtung+f%C3%BCr+Mikrosysteme+und+Festk%C3%B6rper-Technologien!8m2!3d48.1319703!4d11.5304472!3m4!1s0x0:0x97b923ab6c1f3f9e!8m2!3d48.1322433!4d11.5296957?hl=de',
         subtitle: 'Fraunhofer Institut Munich',
         text: 'Start Up Ventures',
-        tag: ['2021', '2022', 'highlights']
+        tag: ['2021', '2022']
     },
     {
         title: "Master's Degree",
@@ -130,6 +185,6 @@ export const resumeData = [
         link: 'https://www.google.de/maps/place/Hochschule+M%C3%BCnchen+-+Campus+Pasing/@48.1415714,11.4489301,17z/data=!3m1!4b1!4m5!3m4!1s0x479dd804085dfdb7:0xd73f28dde3016b41!8m2!3d48.1415678!4d11.4511188?hl=de',
         subtitle: 'Digital Technology Management',
         text: 'My Thesis subject was: coming soon!',
-        tag: ['2021', '2022', 'highlights']
+        tag: ['2021', '2022']
     },    
 ]

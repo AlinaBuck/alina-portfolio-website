@@ -27,6 +27,8 @@
         background-color: var(--background);
         box-shadow: 0 0 15px var(--shadow-primary);
         border-radius: 5px;
+
+        text-transform: uppercase;
         
         margin: 1rem;
         padding: .2rem .5rem;
@@ -97,8 +99,95 @@
 
     margin: 1rem; 
 
+    .app__resume-overview-img, .app__resume-overview-card-container{
+        display: none;
+    }
 }
 
+.overview{
+    width: 100%; 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: none;
+
+    .app__resume-overview-card-container{
+        width: 90%;
+        height: 40%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+        .app__resume-overview-card{
+            width: 100px;
+            height: 100px; 
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            margin: 2rem;
+            padding: .5rem;
+
+            border-radius: 15px;
+            box-shadow: 0 0 15px var(--shadow-primary);
+
+            background-color: var(--background);
+
+            h3{
+                font-size: 14px;
+                font-weight: 500;
+                color: var(--text-primary);
+                height: 50%;
+            }
+
+            p{
+                font-size: 14px;
+                font-weight: 500;
+                color: var(--text-secondary);
+                height: 50%;
+            }
+            
+        }
+    }
+
+    
+
+    .app__resume-overview-img{
+        width: 90%;
+        display: flex;
+        align-items: center;
+
+        margin: 1rem;
+
+        div{
+            position: absolute;
+
+            width: 30px;
+            height: 30px;
+
+            margin-left: 2.5rem;
+
+            border-radius: 50%;
+            
+            background-color: var(--background-switch);
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .app__resume-img, .app__resume-desc, .app__resume-location, .app__resume-title{
+        display: none;
+    }  
+}
 
 
 .app__resume-img{

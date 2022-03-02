@@ -10,6 +10,7 @@ import motivation from '../assets/motivation.png';
 import hobbies from '../assets/hobbies.png';
 
 //Resume
+import arrow from '../assets/arrow.png';
 import birth from '../assets/birth.png';
 import bust from '../assets/bust.png';
 import daimler from '../assets/daimler.png';
@@ -27,7 +28,8 @@ const exportObjects = {
     git,
     darmsheim,
     motivation,
-    hobbies, 
+    hobbies,
+    arrow, 
     birth,
     bust,
     daimler,
