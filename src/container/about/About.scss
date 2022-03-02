@@ -163,7 +163,7 @@
     justify-content: center;
     align-items: center;
 
-    background-color: var(--background);
+    background-color: var(--background-switch);
     box-shadow: 0 0 15px var(--shadow-primary);
     border-radius: 15px;
     z-index: 5;
@@ -220,7 +220,7 @@
             margin: 1rem; 
 
             .app__card-desc-name{
-                color: var(--text-secondary);
+                color: var(--text-third);
                 font-weight: 700;
             }
 
@@ -261,7 +261,7 @@
         top: 0;
         margin: 1rem;
         cursor: pointer;
-        color: var(--text-secondary);
+        color: var(--text-third);
     }
 
 

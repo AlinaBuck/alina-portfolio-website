@@ -2,59 +2,61 @@ import { images } from '../../constants';
 
 export const resumeData = [
     {
-        img: images.arrow,
         tag: ['overview'],
 
-        cardEven:[
+        cards:[
             {
-                date: 1996,
-                title: 'Birthday',
+                date: '1996',
+                text: ['Birthday'],
+                img: images.pic1996,
             },
             {
-                date: 2014,
-                title: 'Abi',
+                date: '2002',
+                text: ['School starts'],
+                img: images.pic2002,
             },
             {
-                date: 2015,
-                title: 'Bachelor',
+                date: '2015',
+                text: ['Au Pair, NZ', 'Hallo'],
+                img: images.pic2015,
             },
             {
-                date: 2019,
-                title: 'BYU',
+                date: '2016',
+                text: ['Bachelor'],
+                img: images.pic2016,
             },
             {
-                date: 2020,
-                title: 'Master',
+                date: '2017',
+                text: ['Intern HTP'],
+                img: images.pic2017,
             },
             {
-                date: 2022,
-                title: 'Fraunhofer',
+                date: '2018',
+                text: ['Bachelor'],
+                img: images.pic2018,
+            },
+            {
+                date: '2019',
+                text: ['Semester Abroad BYU'],
+                img: images.pic2019,
+            },
+            {
+                date: '2020',
+                text: ['Working Student Daimler'],
+                img: images.pic2020,
+            },
+            {
+                date: '2021',
+                text: ['Working Student Bust'],
+                img: images.pic2021,
+            },
+            {
+                date: '2022',
+                text: ['Working Student Fraunhofer'],
+                img: images.pic2022,
             },
 
         ],
-
-        cardOdd:[
-            {
-                date: 2002,
-                title: 'School',
-            },
-            {
-                date: 2014,
-                title: 'Au Pair',
-            },
-            {
-                date: 2017,
-                title: 'HTP',
-            },
-            {
-                date: 2019,
-                title: 'Daimler',
-            },
-            {
-                date: 2021,
-                title: 'Bust',
-            },
-        ]
     },
     {
         title: 'Birthday!!!',
@@ -84,7 +86,7 @@ export const resumeData = [
         link: 'https://www.google.de/maps/place/Mildred-Scheel-Schule/@48.6845018,9.0028348,17.28z/data=!4m5!3m4!1s0x4799e0814c5c1399:0xbb2b3d934558f854!8m2!3d48.6846503!4d9.0041404?hl=de',
         subtitle: 'Mildred Scheel Gymnasium',
         text: 'I finished my A-Levels on a school with a focus on Psychology!',
-        tag: ['2014']
+        tag: ['2015']
     },
     {
         title: 'New Zealand',

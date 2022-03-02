@@ -5,6 +5,7 @@ import { AiOutlineHome } from 'react-icons/ai';
 import { resumeData } from '../../data';
 import './Resume.scss';
 import { motion } from 'framer-motion';
+import { element } from 'prop-types';
 
 const Resume = () => {
   const [activeFilter, setActiveFilter] = useState('overview');
@@ -48,14 +49,9 @@ const Resume = () => {
   return (
     <div className='app__resume'>
 
-      {/* Text */}
-      <h2 className='head-text'>
-        My <span>Life:</span>
-      </h2>
-
       {/* Filter */}
       <div className="app__resume-filter">
-        {['overview','1996', '2002', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'].map((year, index) => (
+        {['overview','1996', '2002', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'].map((year, index) => (
           <div
             key={index}
             onClick={() => handleYearFilter(year)}
@@ -96,39 +92,27 @@ const Resume = () => {
                   </div>
 
                   <div className="app__resume-desc">
+                    
                     <h2>{data.subtitle}</h2>
                     <p>{data.text}</p>
                   </div>
 
-                  <div className="app__resume-overview-card-container">
-                    
-                      {data.cardEven?.map((item, index) => (
-
-                        <div className="app__resume-overview-card top" key={index}>
-                            <h3>{item.date}:</h3>
-                            <p>{item.title}</p>
-                        </div>
-
-                      ))}
-                    
-                  </div>
-
-                  <div className="app__resume-overview-img">
-                    <img src={data.img} alt='arrow' />
-                  </div>
-
-                  <div className="app__resume-overview-card-container">
-
-                    {data.cardOdd?.map((item, index) => (
-
-                      <div className="app__resume-overview-card bottom" key={index}>
-                          <h3>{item.date}:</h3>
-                          <p>{item.title}</p>
+                  {data.cards?.map((item, index) => (
+            
+                      <div className="app__resume-overview-card" key={index} onClick={() => handleYearFilter(item.date)}>
+                          <h3>{item.date}</h3>
+                          
+                          <ul>
+                            {item.text.map(item => (
+                              <li>{item}</li>
+                            ))}
+                          </ul>
+                          
+    
+                          {/* <img src={item.img} alt={item.date} /> */}
                       </div>
-
-                    ))}
-                    
-                  </div>
+        
+                  ))}
 
                 </div>
               ))}
