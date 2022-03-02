@@ -11,6 +11,14 @@ import hobbies from '../assets/hobbies.png';
 
 //Resume
 import birth from '../assets/birth.png';
+import bust from '../assets/bust.png';
+import daimler from '../assets/daimler.png';
+import fraunhofer from '../assets/fraunhofer.png';
+import graduation from '../assets/graduation.png';
+import htp from '../assets/htp.png';
+import newzealand from '../assets/newzealand.png';
+import school from '../assets/school.png';
+import university from '../assets/university.png'; 
 
 const exportObjects = {
     alina,
@@ -20,7 +28,15 @@ const exportObjects = {
     darmsheim,
     motivation,
     hobbies, 
-    birth
+    birth,
+    bust,
+    daimler,
+    fraunhofer,
+    graduation,
+    htp,
+    newzealand,
+    school,
+    university,
 }
 
 export default exportObjects; 

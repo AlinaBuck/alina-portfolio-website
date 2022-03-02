@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
+import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
+import { AiOutlineHome } from 'react-icons/ai';
 
 import { resumeData } from '../../data';
 import './Resume.scss';
+import { motion } from 'framer-motion';
 
 const Resume = () => {
   const [activeFilter, setActiveFilter] = useState('highlights');
@@ -70,15 +72,29 @@ const Resume = () => {
               {resumeFilter.map((data, index) => (
                 <div className="app__resume-card" key={index}>
                   <div className="app__resume-img">
-                    <img src={data.img} alt={data.title} />
+                    <img src={data.img} alt={data.title}/>
+
+                    <a href={data.company} target='_blank' rel='noreferrer'>
+                      <motion.div
+                        whileHover={{ opacity: [0, 1] }}
+                        transition={{ duration: .3, ease: 'easeInOut'}}
+                        className='app__resume-img-hover'
+                      >
+                        <AiOutlineHome/>
+                      </motion.div>
+                    </a>
+
+                  </div>
+
+                  <div className="app__resume-title">
+                    <h1>{data.title}</h1>
                   </div>
 
                   <div className="app__resume-location">
-                    <p>{data.location}</p>
+                    <a href={data.link} target='_blank' rel='noreferrer'>{data.location}</a>
                   </div>
 
                   <div className="app__resume-desc">
-                    <h1>{data.title}</h1>
                     <h2>{data.subtitle}</h2>
                     <p>{data.text}</p>
                   </div>
@@ -103,14 +119,28 @@ const Resume = () => {
                     <div className="app__resume-card">
                       <div className="app__resume-img">
                         <img src={cardOne.img} alt={cardOne.title} />
+
+                        <a href={cardOne.company} target='_blank' rel='noreferrer'>
+                          <motion.div
+                            whileHover={{ opacity: [0, 1] }}
+                            transition={{ duration: .3, ease: 'easeInOut'}}
+                            className='app__resume-img-hover'
+                          >
+                            <AiOutlineHome/>
+                          </motion.div>
+                        </a>
+
+                      </div>
+
+                      <div className="app__resume-title">
+                        <h1>{cardOne.title}</h1>
                       </div>
 
                       <div className="app__resume-location">
-                        <p>{cardOne.location}</p>
+                        <a href={cardOne.link} target='_blank' rel='noreferrer'>{cardOne.location}</a>
                       </div>
 
                       <div className="app__resume-desc">
-                        <h1>{cardOne.title}</h1>
                         <h2>{cardOne.subtitle}</h2>
                         <p>{cardOne.text}</p>
                       </div> 
@@ -119,14 +149,27 @@ const Resume = () => {
                     <div className="app__resume-card">
                       <div className="app__resume-img">
                         <img src={cardTwo.img} alt={cardTwo.title} />
+
+                        <a href={cardTwo.company} target='_blank' rel='noreferrer'>
+                          <motion.div
+                            whileHover={{ opacity: [0, 1] }}
+                            transition={{ duration: .3, ease: 'easeInOut'}}
+                            className='app__resume-img-hover'
+                          >
+                            <AiOutlineHome/>
+                          </motion.div>
+                        </a>
+                      </div>
+
+                      <div className="app__resume-title">
+                        <h1>{cardTwo.title}</h1>
                       </div>
 
                       <div className="app__resume-location">
-                        <p>{cardTwo.location}</p>
+                        <a href={cardTwo.link} target='_blank' rel='noreferrer'>{cardTwo.location}</a>
                       </div>
 
                       <div className="app__resume-desc">
-                        <h1>{cardTwo.title}</h1>
                         <h2>{cardTwo.subtitle}</h2>
                         <p>{cardTwo.text}</p>
                       </div> 
