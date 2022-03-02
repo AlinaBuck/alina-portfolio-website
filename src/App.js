@@ -16,12 +16,12 @@ const App = () => {
   return (
     <div className="app" data-theme={theme}>
       <Navbar switchTheme = {switchTheme}/>
-      <Header />
-      {/* <About /> */}
-      {/* <Resume />
-      <Files />
+      {/* <Header />
+      <About /> */}
+      <Resume />
+      {/* <Files />
       <Testimonial />
-      <Contact /> */}
+      <Contact />  */}
     </div>
   );
 }
