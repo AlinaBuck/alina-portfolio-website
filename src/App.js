@@ -17,10 +17,10 @@ const App = () => {
     <div className="app" data-theme={theme}>
       <Navbar switchTheme = {switchTheme}/>
       {/* <Header />
-      <About /> */}
-      <Resume />
-      {/* <Files />
-      <Testimonial />
+      <About />
+      <Resume /> */}
+      <Files />
+      {/* <Testimonial />
       <Contact />  */}
     </div>
   );

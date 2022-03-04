@@ -6,6 +6,7 @@
   --background: #3AAFA9;
   --background-navbar: rgba(58,175,169,.75);
   --background-switch: #17252A;
+  --background-switch-alternate: rgba(23,37,42,.75);
   --text-primary:  #FFEFFF;
   --text-hover: #17252A;
   --text-secondary: #17252A;
@@ -17,6 +18,7 @@
   --background: #17252A;
   --background-navbar: rgba(23,37,42,.75);
   --background-switch: #3AAFA9;
+  --background-switch-alternate: rgba(58,175,169,.75);
   --text-primary:  #FFEFFF;
   --text-hover: #3AAFA9;
   --text-secondary: #3AAFA9;

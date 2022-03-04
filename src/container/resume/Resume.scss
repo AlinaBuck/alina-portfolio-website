@@ -12,25 +12,8 @@
 
     scroll-snap-align: start;
 
-    h2{
-        margin-bottom: 1rem;
-    }
-
-    /*-- Width --*/
-    /*-- 770px --*/
-    @media screen and (max-width:770px){
-        h2{
-            font-size: 28px;
-        }
-    }
-
-    /*-- Nest Hub --*/
-    @media screen and (width: 1024px) and (height:600px){
-        h2{
-            display: none;
-        }
-    }  
 }
+
 
 /*------ Filter Styling ------*/
 .app__resume-filter{
@@ -57,77 +40,69 @@
 
         &:hover{
             background-color: var(--background-switch);
+        }  
+
+        @media screen and (max-width: 1200px){
+            font-size: 14px;
+            margin: .5rem;
+        }
+        @media screen and (max-width: 900px){
+            margin: .25rem;
+        }
+
+        @media screen and (max-height: 500px){
+            font-size: 10px;
         }
         
     }
     .item-active{
         background-color: var(--background-switch);
     }
+
+    @media screen and (max-height: 500px){
+        margin-top: 2rem;
+    }
+
+
 }
 
 /*------ Cards Container Styling ------*/
-.app__resume-card-container{
+.animation-container{
     height: 70%;
     width: 80%; 
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    /*-- Width --*/
-    /*-- 820px --*/
-    @media screen and(max-width: 820px){
-        flex-direction: column;
-        height: 70%;
+    @media screen and (min-width: 2000px){
+        margin-bottom: 10rem;
     }
-}
 
-/*------ Cards Styling ------*/
-.app__resume-card-btns{
-    height: 100%;
-    width: 50px;
+    @media screen and (max-width: 900px){
+        margin-top: 1rem;
+    }
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @media screen and (max-width: 374px){
+        margin-top: 2rem;
+    }
+
+    @media screen and (max-height: 500px){
+        margin-top: 1rem;
+        height: 50%;
+        justify-self: flex-end;
+    }
     
-    margin: 0 1rem;
-
-    cursor: pointer;
-
-    div{
-        height: 50px;
-        width: 100%;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        svg{
-            height: 50px;
-            width: 50px;
-            color: var(--text-primary);
-        }
-    }
-
-     /*-- Width --*/
-    /*-- 820px --*/
-    @media screen and(max-width: 820px){
-        height: 50px;
-        width: 50px; 
-
-        div{
-
-            svg{
-                transform: rotate(90deg)
-            }
-        }
-
-        z-index: 2;
-    }
-
 }
 
+.app__resume-card-container{
+    height: 100%;
+    width: 100%; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*------ Card Styling ------*/
 .app__resume-card {
     box-shadow: 0 0 15px var(--shadow-primary);
     border-radius: 15px;
@@ -144,9 +119,25 @@
 
     .app__resume-overview-img, .app__resume-overview-card-container{
         display: none;
-    }     
+    } 
+
+    @media screen and (min-width: 2000px){
+       height: 800px;
+       width: 500px;
+    } 
+
+    @media screen and (max-height: 500px){
+        height: 160px;
+        width: 300px;
+    }
 }
 
+.app__resume-card.big{
+    margin: .25rem;
+}
+
+
+/*------ Overview General Styling ------*/
 .overview{
     width: 100%;
     height: 100%;
@@ -160,11 +151,31 @@
 
     box-shadow: none;
 
-    .app__resume-img, .app__resume-desc, .app__resume-location, .app__resume-title, .app__resume-img-bkg{
+    .app__resume-img, .app__resume-desc, .app__resume-location, .app__resume-title, .app__resume-img-bkg, .background-image{
         display: none;
-    }  
+    } 
+    
+    @media screen and (max-width: 1200px){
+        grid-gap: .5rem;
+        margin-top: 1rem;
+    }
+
+    @media screen and (max-width: 760px){
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-gap: .1rem;
+    }
+
+    @media screen and (max-height: 500px){
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: .1rem;
+    }
+
 }
 
+
+/*------ Overview Card Styling ------*/
 .app__resume-overview-card{
     position: relative;
     height: 100%;
@@ -181,33 +192,49 @@
     cursor: pointer;
 
     h3{
+        height: 30%;
         font-size: 28px;
         font-weight: 600;
+
         z-index: 2;
         color: var(--text-primary);
 
         background-color: var(--background-navbar);
         border-radius: 15px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         padding: .5rem;
+        margin: .25rem;
     }
 
-    p{
-        font-size: 14px;
-        border-radius: 15px;
-        padding: .5rem;
-        margin-top: 1rem;
-        
-        background-color: var(--background-navbar);
+    ul{
+        height: 70%;
+        width: 90%;
+        list-style: none;
+
         z-index: 2;
-    }
 
-    div{
-        width: 50px;
-        height: 50px;
-        background-color: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        p{
-            color: blue;
+        li{
+            margin: .25rem; 
+            padding: .25rem; 
+
+            border-radius: 15px;
+            background-color: var(--background-switch-alternate);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: var(--text-primary);
         }
     }
 
@@ -218,7 +245,79 @@
 
         border-radius: 15px;
     }
+
+    &:hover{
+        transform: scale(1.1);
+    }
+
+    /*-- Width --*/
+    @media screen and (min-width: 2000px){
+        h3{
+            padding: 1rem;
+            width: 10rem;
+            margin: 2rem;
+        }
+
+        ul{
+            li{
+                padding: 1rem; 
+                font-size: 28px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1200px){
+        h3{
+            font-size: 20px;
+        }
+        ul{
+            li{
+                font-size: 14px;
+            }
+        }   
+    }
+
+    @media screen and (max-width: 900px){
+        h3{
+            font-size: 16px;
+        }
+        ul{
+            li{
+                font-size: 12px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 760px){
+        h3{
+            font-size: 12px;
+            margin: .1rem
+        }
+        ul{
+            li{
+                font-size: 10px;
+                margin: .1rem;
+            }
+        }
+    }  
+
+    @media screen and (max-height: 500px){
+        margin: 0; 
+        h2{
+            margin: 0;
+            font-size: 8px;
+        }
+        ul{
+            margin: 0;
+            li{
+                margin: 0;
+                font-size: 6px;
+            }
+        }
+    }
 }
+
+
 
 
 .app__resume-img{
@@ -250,6 +349,52 @@
         text-decoration: none;
         color: var(--text-primary);
     }
+
+    /*-- Width --*/
+    @media screen and (min-width: 2000px){
+        width: 100px;
+        height: 100px;
+
+        margin-top: 3.25rem; 
+        margin-left: 3rem;
+    }
+    @media screen and (max-width: 374px){
+        width: 50px;
+        height: 50px;
+        margin-top: 4rem;
+    }
+
+    @media screen and (max-height: 500px){
+        width: 40px;
+        height: 40px;
+        margin-top: 1rem;
+    }
+    
+    
+}
+
+.app__resume-img.big{
+    @media screen and (max-width: 900px){
+        width: 50px;
+        height: 50px;
+    }
+    @media screen and (max-width: 760px){
+        width: 40px;
+        height: 40px;
+
+        margin-left: 0;
+        margin-top: 3rem;
+
+        align-self: center;
+        justify-self: center;
+    }
+    @media screen and (max-height: 500px){
+        width: 40px;
+        height: 40px;
+        margin: 1rem;
+        justify-self: flex-start;
+        align-self: flex-start;
+    }
 }
 
 .app__resume-img-hover{
@@ -275,12 +420,12 @@
         height: 50%;
         width: 50%;
     }
-
 }
+
 
 .app__resume-title{
     position: absolute;
-    width:150px;
+    width: 180px;
     height: 70px;
 
     align-self: flex-end;
@@ -299,6 +444,92 @@
         color: var(--text-secondary);
     }
 
+    /*-- Width --*/
+    @media screen and (min-width: 2000px){
+        width: 180px;
+        height: 100px;
+
+        margin-top: 3.25rem;
+        margin-right: 9rem;
+
+        h1{
+            font-size: 28px;
+        }
+    }
+
+    @media screen and (max-width: 424px){
+        width: 150px;
+    }
+
+    @media screen and (max-width: 374px){
+        height: 50px;
+        width: 105px;
+        margin-top: 4rem;
+
+        h1{
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-height: 500px){
+        margin-top: 0;
+        width: 200px;
+
+        h1{
+            font-size: 16px;
+        }
+    }
+    
+}
+
+.app__resume-title.big{
+    @media screen and (max-width: 1054px){
+        width: 150px;
+    }
+
+    @media screen and (max-width: 900px){
+        width: 110px;
+        height: 50px;
+        font-size: 18px;
+    }
+    @media screen and (max-width: 760px){
+        margin-right: 0;
+        margin-top: 6rem;
+        width: 27.5%;
+
+        align-self: center;
+        justify-self: center;
+
+        justify-content: center;
+
+        h1{
+            text-align: center;
+            font-size: 16px;
+        }
+    }
+    @media screen and (max-width: 424px){
+        h1{
+            font-size: 14px;
+        }
+    }
+    @media screen and (max-width: 374px){
+        h1{
+            font-size: 12px;
+        }
+    }
+    
+
+    @media screen and (max-height: 500px){
+        margin-left: 4rem;
+        margin-top: .5rem;
+        width: 160px;
+
+        h1{
+            font-size: 14px;
+        }
+       
+    }
+
 }
 
 .app__resume-location{
@@ -309,19 +540,42 @@
     padding: .5rem;
 
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     a{
         font-size: 14px;
         text-decoration: none;
-        color: var(--text-primary)
+        color: var(--text-primary);
+    }
+
+    @media screen and (max-height: 500px){
+        display: none;
+    }
+    
+    
+}
+
+.app__resume-location.big{
+    @media screen and (max-width: 760px){
+        padding: .25rem;
+        a{
+            font-size: 10px;
+        }
+    }
+    @media screen and (max-width: 374px){
+        a{
+            font-size: 8px;
+        };
     }
 }
 
 .app__resume-desc{
     position: absolute;
 
-    margin-top: 140px;
-    height: 240px;
+    margin-top: 8rem;
+    height: 28%;
     width: 280px;
 
    display: flex;
@@ -338,17 +592,176 @@
        margin: 0 1.5rem;
    }
 
-   /*-- Width --*/
-    /*-- 770px --*/
-    @media screen and(max-width: 770px){
+    /*-- Width --*/
+    @media screen and (min-width: 2000px){
+        margin-top: 12rem;
+        width: 380px;
 
-        margin-top: 130px;
-        height: 145px;
         h2{
-            margin: .25rem 1.5rem; 
+            font-size: 28px;
+        }
+
+        p{
+            font-size: 23px;
+        }   
+    }
+
+    @media screen and (max-width: 374px){
+        width: 180px;
+        height: 36%;
+
+        h2{
+            margin: .5rem .5rem;
+        }
+        p{
+            margin: 0 .5rem;
         }
     }
 
+    @media screen and (max-height: 500px){
+        margin-top: 4rem;
+
+        h2{
+            margin: 0;
+            font-size: 14px;
+        }
+        p{
+            margin: .25rem 0;
+            font-size: 12px;
+        }
+    }
 }
+
+.app__resume-desc.big{
+    /*-- Width --*/
+    @media screen and (max-width: 1054px){
+        width: 240px;
+        height: 38%;
+    }
+
+    @media screen and (max-width: 900px){
+        width: 180px;
+
+        h2{
+            font-size: 14px;
+            margin: .5rem 1rem;
+        }
+        p{
+            margin: 0 1rem;
+            font-size: 12px; 
+        }
+    }
+
+    @media screen and (max-width: 760px){
+        width: 130px;
+        height: 30%;
+        margin-top: 10rem;
+        h2{
+            font-size: 12px;
+            margin: .25rem .5rem;
+        }
+        p{
+            margin: 0 .5rem;
+            font-size: 10px;
+        }
+    }
+    @media screen and (max-width: 424px){
+        width: 115px;
+    }
+    @media screen and (max-width: 374px){
+        width: 80px;
+        h2{
+            font-size: 8px;
+        }
+        p{
+            font-size: 8px;
+        }
+    }
+    @media screen and (max-height: 500px){
+        margin: 0;
+        margin-top: 4rem;
+
+        width: 200px;
+
+        h2{
+            margin:0;
+        }
+        p{
+            margin: .25rem 0;
+        }
+    }
+}
+
+
+/*------ Cards Buttons Styling ------*/
+.app__resume-card-btns{
+    height: 100%;
+    width: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0 1rem;
+
+    cursor: pointer;
+
+    div{
+        height: 50px;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg{
+            height: 45px;
+            width: 45px;
+            color: var(--text-primary);
+        }
+    }
+
+    &:hover{
+        div{
+            svg{
+                height: 100%;
+                width: 100%;
+            }
+        } 
+    }
+
+    @media screen and (max-width: 760px){
+        width: 20px;
+        margin: 0;
+
+        &:hover{
+            div{
+                svg{
+                    height: 45px;
+                    width: 20px;
+                }
+            } 
+        }
+    }
+
+    @media screen and (max-height: 500px){
+        width: 20px;
+        margin: 0;
+
+        &:hover{
+            div{
+                svg{
+                    height: 45px;
+                    width: 20px;
+                }
+            } 
+        }
+    }
+}
+
+
+
+
+
 
 

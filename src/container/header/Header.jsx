@@ -18,7 +18,7 @@ const Header = () => {
   }
 
   return (
-    <div className="app__header">
+    <div className="app__header" id='home'>
 
       {/* Badge */}
       <motion.div

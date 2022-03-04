@@ -20,6 +20,7 @@ const About = () => {
   return (
     <motion.div 
       className='app__about'
+      id='about'
     >
 
       {/* Text */}
