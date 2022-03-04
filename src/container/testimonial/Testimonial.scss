@@ -1,0 +1,156 @@
+.app__testimonial{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.app__testimonial-card{
+    margin-top: 2rem;
+
+    height: 40%;
+    width: 70%;
+
+    box-shadow: 0 0 15px var(--shadow-primary);
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.app__testimonial-image{
+
+    border-radius: 50%;
+
+    height: 160px;
+    width: 160px;
+
+    object-fit: cover;
+
+    @media screen and (min-width: 2000px) {
+        height: 380px;
+        width: 380px;
+    }
+    @media screen and (max-width: 760px) {
+        height: 120px;
+        width: 120px;
+    }
+    @media screen and (max-width: 425px) {
+        height: 100px;
+        width: 100px;
+    }
+    @media screen and (max-width: 375px) {
+        height: 80px;
+        width: 80px;
+    }
+    @media screen and (max-width: 375px) {
+        height: 60px;
+        width: 60px;
+    }
+
+    @media screen and (max-height: 500px) {
+        height: 100px;
+        width: 100px;
+    }
+
+}
+
+.app__testimonial-content{
+    flex: .75;
+    margin-left: 3rem;
+    p{
+        font-size: 18px;
+    }
+
+    h4{
+        margin-top: 2rem;
+        font-size: 16px;
+    }
+
+    h5{
+        font-size: 16px;
+    }
+
+    @media screen and (min-width: 2000px) {
+        p{
+            font-size: 40px;
+        }
+        h4, h5{
+            font-size: 34px;
+        }
+    }
+    @media screen and (max-width: 760px) {
+        margin-left: 1rem;
+        p{
+            font-size: 16px;
+        }
+        h4, h5{
+            font-size: 14px;
+        };
+    }
+    @media screen and (max-width: 425px) {
+        margin-left: 1rem;
+        p{
+            font-size: 14px;
+        }
+        h4, h5{
+            font-size: 12px;
+        };
+    }
+    @media screen and (max-width: 320px) {
+        margin-left: .5rem;
+        p{
+            font-size: 12px;
+        }
+        h4, h5{
+            font-size: 10px;
+        };
+    }
+}
+
+.app__testimonial-btns{
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    cursor: pointer;
+
+    svg{ 
+        height: 50px;
+        width: 50px;
+        margin: 0 2rem; 
+        color: var(--text-primary);
+    }
+
+    @media screen and (min-width: 2000px) {
+        svg{
+            height: 80px;
+            width: 80px;
+        }
+    }
+    @media screen and (max-width: 425px) {
+        svg{
+            height: 30px;
+            width: 30px;
+            margin: 0 1rem; 
+        }
+    }
+}
+
+@keyframes sliderOne {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}

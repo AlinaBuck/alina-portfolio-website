@@ -18,10 +18,10 @@ const App = () => {
       <Navbar switchTheme = {switchTheme}/>
       {/* <Header />
       <About />
-      <Resume /> */}
-      <Files />
-      {/* <Testimonial />
-      <Contact />  */}
+      <Resume />
+      <Files /> */}
+      {/* <Testimonial /> */}
+      <Contact /> 
     </div>
   );
 }

@@ -33,6 +33,13 @@ import pic2020 from '../assets/2020.jpeg';
 import pic2021 from '../assets/2021.jpeg'; 
 import pic2022 from '../assets/2022.jpeg'; 
 
+//Files
+import pdf from '../assets/pdf.png';
+
+//Testimonials
+import kobe from '../assets/kobe.jpeg';
+import powder from '../assets/powder.jpeg';
+
 const exportObjects = {
     alina,
     api,
@@ -63,6 +70,9 @@ const exportObjects = {
     pic2020,
     pic2021,
     pic2022,
+    pdf,
+    kobe,
+    powder,
 }
 
 export default exportObjects; 
