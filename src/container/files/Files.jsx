@@ -10,7 +10,7 @@ const Files = () => {
   return (
     <motion.div 
       className='app__file'
-      id='file'
+      id='files'
     >
       {/* Text */}
       <h2 className='head-text'>

@@ -40,6 +40,10 @@ import pdf from '../assets/pdf.png';
 import kobe from '../assets/kobe.jpeg';
 import powder from '../assets/powder.jpeg';
 
+//contact
+import email from '../assets/email.png';
+import phone from '../assets/mobile.png';
+
 const exportObjects = {
     alina,
     api,
@@ -73,6 +77,8 @@ const exportObjects = {
     pdf,
     kobe,
     powder,
+    email,
+    phone,
 }
 
 export default exportObjects; 

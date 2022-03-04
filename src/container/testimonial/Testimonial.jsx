@@ -7,7 +7,6 @@ import './Testimonial.scss'
 
 
 const Testimonial = () => {
-  const [brands, setBrands] = useState([])
   const [testimonials, setTestimonials] = useState([])
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -23,7 +22,7 @@ const Testimonial = () => {
   const test = testimonials[currentIndex];
 
   return (
-    <div className='app__testimonial'>
+    <div className='app__testimonial' id='testimonials'>
       {testimonials.length && (
         <>
           <motion.div 
