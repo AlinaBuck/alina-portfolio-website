@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import { images } from '../../constants';
+import { circles } from '../../data';
 import './Header.scss';
 
 const Header = () => {
@@ -65,9 +66,10 @@ const Header = () => {
         className='app__header-circles'
       >
         {
-          [images.api, images.figma, images.git].map((circle, index) => (
-            <div className='circle' key={`circle-${index}`}>
-              <img src={circle} alt='circle' />
+          circles.map((circle, index) => (
+            <div className='circle' key={index}>
+              <img src={circle.image} alt={circle.title}/>
+              <a href={circle.anchor} target='_blank' rel='noreferrer'>h</a>
             </div>
           ))
         }

@@ -1,12 +1,12 @@
 /*------ Overall Styling ------*/
 .app__header{
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
     flex-direction: row;
 
     height: 100vh;
-    width: 100%;
+    width: 100vw;
 
     scroll-snap-align: start;
 
@@ -20,27 +20,7 @@
     @media screen and(max-width: 1200px) {
         flex-direction: column;
     }
-    /*-- 570px --*/
-    @media  screen and (max-width: 570px) {
-        width: 100vw; 
-        justify-content: center; 
-    }
-
-    /*-- Height --*/
-    /*-- 414px --*/
-    @media screen and(max-height: 414px) {
-        flex-direction: row;
-    }
-
-    /*-- Special Cases --*/
-    /*-- Surface Duo Unfolded Horizontal --*/
-    @media screen and (width: 1114px) and (height: 720px) {
-        flex-direction: row;
-    }
-    /*-- Galaxy Fold Unfolded Horizontal --*/
-    @media screen and (width: 717px) and (height: 512px) {
-        flex-direction: row;
-    }  
+     
 }
 
 /*------ Badges Left Styling ------*/
@@ -55,24 +35,13 @@
     /*-- Width --*/
     /*-- 1200px --*/
     @media screen and(max-width: 1200px) {
-       flex: .35;
+       flex: .25;
     }
+   
 
-    /*-- Height --*/
-    /*-- 414px --*/
-    @media screen and(max-height: 414px) {
-        flex: .4;
-    }
+    
 
-    /*-- Special Cases --*/
-    /*-- Surface Duo Unfolded Horizontal --*/
-    @media screen and (width: 1114px) and (height: 720px) {
-        flex: .4
-    }
-    /*-- Galaxy Fold Unfolded Horizontal --*/
-    @media screen and (width: 717px) and (height: 512px) {
-        flex: .4
-    }
+    
 }
 
 .app__header-badge{
@@ -120,126 +89,148 @@
         }
     }
 
+    /*-- 2000px --*/
+    @media screen and(min-width: 2000px) {
+        .badge{
+            p{
+                font-size: 2rem;
+            }
+            h1{
+                font-size: 6rem;
+            }
+        }
+        .tag{
+            p{
+                font-size: 1.5rem;
+            }
+        }
+    }
+
     /*-- Width --*/
     /*-- 1200px --*/
     @media screen and (max-width: 1200px) {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-
-        .tag{
-            margin-left: 5rem;
-            margin-bottom: 1.5rem;
-        }
-    }
-    /*-- 570px --*/
-    @media screen and (max-width: 570px) {
-        .tag{
-            margin-left: .5rem; 
-        }
-
-        .badge, .tag{
-            p{
-                font-size: .45rem;
-            }
-            span{
-                font-size: 1rem;
-            }
-        }
-    }
-    /*-- 280px --*/
-    @media screen and (max-width: 280px) {
-        .badge, .tag{
-            width: 125px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            span{
-                display: none;
-            }
-        }
-        
-    }
-    /*-- Height --*/
-    /*-- 850px --*/
-    @media screen and (max-height: 850px) {
-        margin-top: 3rem;
-    }
-    /*-- 600px --*/
-    @media screen and (max-height: 600px) {
-        .badge, .tag{
-
-            p{
-                font-size: .7rem;
-            }
-
-            span{
-                font-size: 1rem;
-            }
-
+        .badge{
             h1{
                 font-size: 2rem;
             }
         }
+        .tag{
+            margin-left: 3rem;
+            margin-top: 0;
+            p{
+                font-size: .5rem;
+            }
+        }
+        span{
+            font-size: 2rem;
+        }
     }
-    /*-- 414px --*/
-    @media screen and(max-height: 414px) {
-        flex-direction: column;
+
+    @media screen and (max-width: 500px) {
+        .tag{
+            margin-left: 1rem;  
+        }   
+    }
+    @media screen and (max-width: 375px) {
         .badge, .tag{
-            width: 150px;
+            margin: 1rem 1rem; 
             
         }
-
-        .tag{
-            margin-top: .2rem;
-            margin-left: 0;
-        }
-    }
-    /*-- 280px --*/
-    @media screen and(max-height: 280px) {
-        flex-direction: column;
-        .badge, .tag{
-            margin-top: .5rem;
-
+        .badge{
             p{
-                font-size: 10px;
-            }
-            span{
-                display: none;
+                font-size: .75rem;
             }
             h1{
-                font-size: 23px;
+                font-size: 2rem;
+            }
+        }
+
+        .tag{
+            margin-left: 0;
+        }
+        
+        span{
+            font-size: 1rem;
+        }   
+    }
+    @media screen and (max-width: 280px) {
+        justify-content: center;
+        .badge, .tag{
+            margin: .5rem .25rem; 
+            h1{
+                font-size: 1rem;
             }
             
         }
 
-        .tag{
-            margin-top: .2rem;
-            margin-left: 0;
+        .badge{
+            padding: .5rem;
+            p{
+                font-size: .75rem;
+            }
+            h1{
+                font-size: 1.5rem;
+            }
         }
-    }
 
-    /*-- Special Cases --*/
-    /*-- Surface Duo Unfolded Horizontal --*/
-    @media screen and (width: 1114px) and (height: 720px) {
-        flex-direction: column;
+        .tag{
+            padding: .5rem;
+            p{
+                font-size: .5rem;
+            }
+        }
         
-        .tag{
-            margin-top: 1rem;
-            margin-left: 0;
-        }
+        span{
+            font-size: 1rem;
+        }   
     }
-    /*-- Galaxy Fold Unfolded Horizontal --*/
-    @media screen and (width: 717px) and (height: 512px) {
-        flex-direction: column;
+
+    @media screen and (max-height: 580px) {
         .badge, .tag{
-            width: 150px;   
+            margin: 1rem;
+            padding: .5rem;
+
+            p{
+                font-size: .5rem;
+            }
         }
 
-        .tag{
-            margin-top: 1rem;
-            margin-left: 0;
+        .badge{
+            h1{
+                font-size: 1rem;
+            }
+        }
+
+        span{
+            font-size: 1rem;
+        }
+    }
+    @media screen and (max-height: 375px) {
+        .badge, .tag{
+            margin: .5rem;
+            padding: .25rem;
+        }
+    }
+    @media screen and (max-height: 375px) {
+        margin: 0;
+        .badge, .tag{
+
+            p{
+                font-size: .4rem;
+            }
+        }
+
+        .badge{
+            h1{
+                font-size: 1rem;
+            }
+        }
+
+        span{
+            font-size: 1rem;
         }
     }
 }
@@ -266,45 +257,19 @@
     /*-- Width --*/
     /*-- 1200px --*/
     @media screen and (max-width: 1200px) {
-        flex: .5;
+        flex: .55;
         min-height: 50%;
         align-items: center;
-
+        
         img{
             height: 100%;
             margin-left: 2rem;   
         }
     }
 
-    /*-- Height --*/
-    /*-- 414px --*/
-    @media screen and(max-height: 414px) {
-        flex: .4;
-        justify-content: center;
+    @media screen and (max-height: 320px) {
+        flex: .6;
         align-items: flex-end;
-        img{
-            margin-left: 0;
-        }
-    }
-
-    /*-- Special Cases --*/
-    /*-- Surface Duo Unfolded Horizontal --*/
-    @media screen and (width: 1114px) and (height: 720px) {
-        flex: .4;
-        justify-content: center;
-        align-items: flex-end;
-        img{
-            margin-left: 0;
-        }
-    }
-    /*-- Galaxy Fold Unfolded Horizontal --*/
-    @media screen and (width: 717px) and (height: 512px) {
-        flex: .4;
-        justify-content: center;
-        align-items: flex-end;
-        img{
-            margin-left: 0;
-        }
     }
     
 }
@@ -339,6 +304,20 @@
             width: 60%;
             height: 60%; 
         }
+
+        a{  
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: transparent;
+            color: transparent;
+
+        }
+
+        &:hover{
+            transform: scale(1.1);
+        }
     }
 
     div:nth-child(1){
@@ -357,203 +336,107 @@
     }
 
     /*-- Width --*/
+    /*-- 2000px --*/
+    @media screen and(min-width: 2000px) {
+        div{
+            width: 200px;
+            height: 200px;
+        }
+        div:nth-child(1){
+            margin-right: 4rem; 
+        }
+    
+        div:nth-child(2){
+            width: 250px;
+            height: 250px;
+        }
+    
+        div:nth-child(3){
+            margin-right: 5rem;
+            width: 150px;
+            height: 150px;
+        }
+    }
     /*-- 1200px --*/
     @media screen and (max-width: 1200px) {
         width: 100%;
-        flex: .15;
+        flex: .1;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        margin-right: 2rem;
 
         div:nth-child(1){
-            margin-right: 0;
-            margin-bottom: 4rem; 
-        }
-    
-        div:nth-child(2){
-            width: 125px;
-            height: 125px;
-        }
-    
-        div:nth-child(3){
-            margin-right: 0;
-            margin-bottom: 6rem;
-            width: 70px;
-            height: 70px;
-        }
-    }
-
-    /*-- 570px --*/
-    @media screen and (max-width: 570px) {
-        margin-right: 0;
-        div:nth-child(1){
-            margin-right: 0;
-            margin-bottom: 4rem;
-            width: 70px;
-            height: 70px; 
-        }
-    
-        div:nth-child(2){
-            width: 100px;
-            height: 100px;
-        }
-    
-        div:nth-child(3){
-            margin-right: 0;
-            margin-bottom: 6rem;
-            width: 50px;
-            height: 50px;
-        }
-    }
-
-    /*-- 280px --*/
-    @media screen and (max-width: 280px) {
-        margin-right: 0;
-        div:nth-child(1){
-            margin-right: 0;
-            margin-bottom: 4rem;
-            width: 50px;
-            height: 50px; 
-        }
-    
-        div:nth-child(2){
-            margin-bottom: 1rem;
             width: 60px;
             height: 60px;
+            margin-right: 0;
+            margin-bottom: 2rem; 
+        }
+    
+        div:nth-child(2){
+            width: 80px;
+            height: 80px;
         }
     
         div:nth-child(3){
             margin-right: 0;
-            margin-bottom: 6rem;
-            width: 30px;
-            height: 30px;
-        }
-    }
-
-    /*-- Height --*/
-    /*-- 600px --*/
-    @media screen and (max-height: 600px) {
-        height: 10%;
-        div:nth-child(1){
-            width: 50px;
-            height: 50px; 
-        }
-    
-        div:nth-child(2){
             margin-bottom: 2rem;
             width: 60px;
             height: 60px;
         }
-    
-        div:nth-child(3){
-            width: 30px;
-            height: 30px;
-        }
     }
-
-    /*-- 414px --*/
-    @media screen and(max-height: 414px) {
-        flex: .2;
-        height: 100%;
-        flex-direction: column;
-        margin-top: 1rem;
+    @media screen and (max-width: 375px) {
         div:nth-child(1){
-            margin: 0;
-            width: 50px;
-            height: 50px; 
+            width: 40px;
+            height: 40px;
+            
         }
     
         div:nth-child(2){
-            margin-left: 3rem;
-            margin-top: 2rem;
             width: 60px;
             height: 60px;
         }
     
         div:nth-child(3){
-            margin: 0;
-            width: 30px;
-            height: 30px;
-        }
-    }
-
-    /*-- Special Cases --*/
-    /*-- Surface Duo Unfolded Horizontal --*/
-    @media screen and (width: 1114px) and (height: 720px) {
-        flex: .2;
-        height: 100%;
-        flex-direction: column;
-        margin-top: 1rem;
-        div:nth-child(1){
-            margin: 0;
-            width: 50px;
-            height: 50px; 
-        }
-    
-        div:nth-child(2){
-            margin-left: 3rem;
-            margin-top: 2rem;
-            width: 60px;
-            height: 60px;
-        }
-    
-        div:nth-child(3){
-            margin: 0;
-            width: 30px;
-            height: 30px;
-        }
-    }
-    /*-- Surface Duo Folded Horizontal --*/
-    @media screen and (width: 720px) and (height: 540px) {
-        div:nth-child(1){
-            margin-bottom: 1.5rem; 
             width: 40px;
             height: 40px;
         }
-        div:nth-child(2){
-            margin-bottom: 1rem; 
-            width: 45px;
-            height: 45px;
-        }
-        div:nth-child(3){
-            margin-bottom: 2rem; 
-        }
     }
-    /*-- Nest Hub --*/
-    @media screen and (width: 1024px) and (height:600px){
-        div:nth-child(2){
-            margin-bottom: 3rem;
-            width: 60px;
-            height: 60px;
-        }
+
+    @media screen and (max-height: 580px) {
         div:nth-child(1){
-            margin-bottom: 5rem;
-        }
-    }
-    /*-- Galaxy Fold Unfolded Horizontal --*/
-    @media screen and (width: 717px) and (height: 512px) {
-        flex: .2;
-        height: 100%;
-        flex-direction: column;
-        margin-top: 1rem;
-        div:nth-child(1){
-            margin: 0;
-            width: 50px;
-            height: 50px; 
+            width: 40px;
+            height: 40px;  
         }
     
         div:nth-child(2){
-            margin-left: 3rem;
-            margin-top: 2rem;
             width: 60px;
             height: 60px;
         }
     
         div:nth-child(3){
-            margin: 0;
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
         }
     }
+
+    @media screen and (max-height: 375px) {
+        div:nth-child(1){
+            width: 25px;
+            height: 25px;  
+        }
+    
+        div:nth-child(2){
+            width: 40px;
+            height: 40px;
+        }
+    
+        div:nth-child(3){
+            width: 25px;
+            height: 25px;
+        }
+    }
+    @media screen and (max-height: 320px) {
+        display: none;;
+    }
+
 }

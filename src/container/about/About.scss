@@ -14,23 +14,29 @@
         text-transform: uppercase;
     }
 
-
-    /*-- Width --*/
-    /*-- 570px --*/
-    @media screen and (max-width: 570px) {
+    @media  screen and (max-width: 768px) {
         h2{
-            font-size: 23px;
-            margin-bottom: 1rem;
-        }
+            font-size: 24px;
+        }    
+    }
+    @media  screen and (max-width: 320px) {
+        h2{
+            font-size: 18px;
+        }    
     }
 
-    /*-- Height --*/
-    /*-- 450px --*/
-    @media screen and (max-height: 450px) {
+    @media  screen and (min-height: 2000px) {
         h2{
-            display: none;
-        }  
+            font-size: 56px;
+        }    
     }
+    @media  screen and (max-height: 500px) {
+        h2{
+            font-size: 18px;
+            margin-top: 2rem;
+        }    
+    }
+ 
 }
 
 /*------ Overall Styling Card Container ------*/
@@ -41,19 +47,27 @@
     flex-wrap: wrap;
 
     margin-top: 2rem;
+
+    @media  screen and (max-width: 765px) {
+        margin-top: 0rem !important;   
+    }
+
+    @media  screen and (max-height: 500px) {
+        margin-top: 0rem !important;   
+    }
+
+    
 }
 
 /*------ Overall Styling Individual Cards ------*/
 .app__card-item{
     position: relative;
-
-    width: 190px;
-    height: 250px;
     
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
 
     border-radius: 15px;
     box-shadow: 0 0 15px var(--shadow-primary);
@@ -95,55 +109,40 @@
         }
     }
 
-
-    /*-- Width --*/
-    /*-- 570px --*/
-    @media screen and (max-width: 570px) {
-
-        width: 120px;
-        height: 180px;
-        margin: 1rem; 
-
-        h1{
-            font-size: 12px;
-        }
-    }
-    /*-- 280px --*/
-    @media screen and (max-width: 280px) {
-
-        width: 100px;
-        height: 130px;
-        margin: 1rem; 
+    @media  screen and (min-width: 2000px) {
+        height: 500px !important;
+        width: 400px !important;
 
         img{
-            height: 100%;
+            height: 450px !important;
+            width: 400px !important;    
         }
 
         h1{
-            height: 20%;
-            font-size: 10px;
+            font-size: 38px !important;
+        }
+    }
+      
+
+    @media  screen and (min-height: 2000px) {
+        height: 500px !important;
+        width: 400px !important;
+
+        img{
+            height: 450px !important;
+            width: 400px !important;    
+        }
+
+        h1{
+            font-size: 38px !important;
         }
     }
 
-    /*-- Height --*/
-    /*-- 540px --*/
-    @media screen and (max-height: 540px){
-        width: 120px;
-        height: 180px;
-
-        h1{
-            font-size: 12px;
-        }  
+    @media  screen and (max-height: 500px) {
+        margin: 1rem !important;  
     }
-    /*-- 375px --*/
-    @media screen and (max-height: 375px){
-        width: 120px;
-        height: 180px;
-
-        h1{
-            font-size: 12px;
-        }
-    }
+    
+    
 }
 
 /*------ Overall Styling Individual Description Cards ------*/
@@ -157,7 +156,7 @@
     left: 25;
 
     height: 50%;
-    width: 50%;
+    width: 60%;
 
     display: flex;
     justify-content: center;
@@ -196,12 +195,19 @@
         &:hover{
             width: 10%;
         } 
+
+        @media  screen and (min-width: 2000px) {
+            font-size: 38px;
+        }   
         
-        /*-- Height --*/
-        /*-- 540px --*/
-        @media screen and (max-height: 540px){
-            font-size: 18px; 
+        @media  screen and (min-height: 2000px) {
+            font-size: 38px;
+        } 
+
+        @media  screen and (max-height: 500px) {
+            font-size: 14px;   
         }
+   
     }
 
     .app__card-desc{
@@ -233,24 +239,80 @@
                 margin-left: 1rem;
             }
 
-            /*-- Width --*/
-            /*-- 280px --*/
-            @media screen and (max-width: 280px) {
-                font-size: 12px;  
+            @media  screen and (min-width: 2000px) {
+                .app__card-desc-name{
+                    font-size: 34px;
+                }
+                .app__card-desc-secondName{
+                    font-size: 30px;
+                }
+                .app__card-desc-text{
+                    font-size: 26px;
+                }
+            }  
+
+            @media  screen and (max-width: 1024px) {
+                margin: .5rem
             }
 
-            /*-- Height --*/
-            /*-- 600px --*/
-            @media screen and (max-height: 600px){
-                font-size: 12px;
-                margin: .5rem;
-            }
+            @media  screen and (max-width: 320px) {
+                .app__card-desc-name{
+                    font-size: 16px;
+                }
+                .app__card-desc-secondName{
+                    font-size: 14px;
+                }
+                .app__card-desc-text{
+                    font-size: 12px;
+                }
+            } 
 
-            /*-- 280px --*/
-            @media screen and (max-height: 280px){
-                margin: .2rem;
-            }
+            @media  screen and (min-height: 2000px) {
+                .app__card-desc-name{
+                    font-size: 34px;
+                }
+                .app__card-desc-secondName{
+                    font-size: 30px;
+                }
+                .app__card-desc-text{
+                    font-size: 26px;
+                }
+            } 
 
+            @media  screen and (max-height: 500px) {
+                .app__card-desc-name{
+                    font-size: 14px;
+                }
+                .app__card-desc-secondName{
+                    font-size: 12px;
+                }
+                .app__card-desc-text{
+                    font-size: 10px;
+                }
+            } 
+            @media screen and (max-height: 360px) {
+                .app__card-desc-name{
+                    font-size: 12px;
+                }
+                .app__card-desc-secondName{
+                    font-size: 12px;
+                }
+                .app__card-desc-text{
+                    font-size: 10px;
+                }
+            } 
+            @media screen and (max-height: 280px) {
+                margin: .25rem;
+                .app__card-desc-name{
+                    font-size: 10px;
+                }
+                .app__card-desc-secondName{
+                    font-size: 10px;
+                }
+                .app__card-desc-text{
+                    font-size: 8px;
+                }
+            } 
         }
 
     }
@@ -262,57 +324,30 @@
         margin: 1rem;
         cursor: pointer;
         color: var(--text-third);
+
+        @media  screen and (min-width: 2000px) {
+            font-size: 38px;
+        }
+        @media  screen and (min-height: 2000px) {
+            font-size: 38px;
+        }
+    } 
+
+    @media  screen and (max-width: 1024px) {
+        width: 70%;    
+    }
+    @media  screen and (max-width: 912px) {
+        width: 95%;   
+    }
+    @media  screen and (max-width: 768px) {
+        height: 59%;    
     }
 
-
-    /*-- Width --*/
-    /*-- 1368px --*/
-    @media screen and (max-width: 1368px) {
-        height: 50%;
-        width: 88%; 
+    @media  screen and (min-height: 2000px) {
+        width: 90%;
     }
-    /*-- 768px --*/
-    @media screen and (max-width: 768px) {
-        width: 92%;  
-    }
-    /*-- 570px --*/
-    @media screen and (max-width: 570px) {
-        height: 62%;  
-    }
-    /*-- 425px --*/
-    @media screen and (max-width:425px){
-        height: 65%; 
-    }
-    /*-- 289px --*/
-    @media screen and (max-width:289px){
-        height: 60%; 
-    }
-
-    /*-- Height --*/
-    /*-- 450px --*/
-    @media screen and (max-height: 450px) {
+    @media  screen and (max-height: 500px) {
         height: 60%;
-        margin-top: .5rem;
-    }
-    /*-- 375px --*/
-    @media screen and (max-height: 375px) {
-        height: 70%;
-        margin-bottom: .25;   
-    }
-    /*-- 280px --*/
-    @media screen and (max-height: 280px){
-        margin-bottom: 0;
-        margin-top: 1.5rem;
-    }
+    } 
 
-    /*-- Special Cases --*/
-    /*-- Surface Duo Unfolded Vertical --*/
-    @media screen and (width: 720px) and (height: 1114px) {
-        height: 60%;
-    }
-
-    /*-- Nest Hub --*/
-    @media screen and (width: 1024px) and (height:600px){
-        width: 70%;
-    }    
 }

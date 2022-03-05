@@ -46,10 +46,10 @@ const Testimonial = () => {
             className='app__testimonial-btns'
           >
             <div onClick={() => handleClick(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}>
-              <HiChevronLeft />
+              <HiChevronLeft className='left' />
             </div>
             <div onClick={() => handleClick(currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1)}>
-              <HiChevronRight />
+              <HiChevronRight className='right'/>
             </div>
           </motion.div>
         </>

@@ -1,6 +1,6 @@
 // Header
 import alina from '../assets/alina.png';
-import api from '../assets/api.png';
+import linkedin from '../assets/linkedin.png';
 import figma from '../assets/figma.png';
 import git from '../assets/git.png';
 
@@ -46,7 +46,7 @@ import phone from '../assets/mobile.png';
 
 const exportObjects = {
     alina,
-    api,
+    linkedin,
     figma,
     git,
     darmsheim,

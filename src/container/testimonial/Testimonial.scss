@@ -124,25 +124,54 @@
     flex-direction: row;
 
     cursor: pointer;
+    
+    div{
 
-    svg{ 
         height: 50px;
         width: 50px;
-        margin: 0 2rem; 
+        background-color: var(--background-switch);
+        box-shadow: 0 0 15px var(--shadow-primary);
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 1rem 2rem; 
+
+        &:hover{
+            transform: scale(1.1);
+            background-color: var(--background-color);
+        }
+    }
+
+    svg{ 
+        height: 100%;
+        width: 80%;
+       
         color: var(--text-primary);
+
+        
+    }
+    .left{
+        margin-right: .2rem;
+    }
+
+    .right{
+        margin-left: .25rem;
     }
 
     @media screen and (min-width: 2000px) {
-        svg{
+        div{
             height: 80px;
             width: 80px;
         }
     }
     @media screen and (max-width: 425px) {
-        svg{
+        div{
             height: 30px;
             width: 30px;
-            margin: 0 1rem; 
+            margin: 1rem 1rem; 
         }
     }
 }
