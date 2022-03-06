@@ -30,7 +30,7 @@ const Resume = () => {
 
       setResume(resumeData.filter((item) => item.tag.includes(year)));
       setResumeFilter(resumeData.filter((item) => item.tag.includes(year)));
-    }, 800);
+    }, 700);
   }
 
   
@@ -109,8 +109,6 @@ const Resume = () => {
                   {data.cards?.map((item, index) => (
             
                       <motion.div   
-                        whileInView={{ opacity: [0, 1] }}
-                        transition={{ duration: 1}}
                         key={index} 
                         onClick={() => handleYearFilter(item.date)}
                         className='app__resume-overview-card' 

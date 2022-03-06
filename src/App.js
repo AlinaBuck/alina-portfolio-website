@@ -21,7 +21,7 @@ const App = () => {
       <Resume />
       <Files />
       <Testimonial />
-      {/* <Contact />  */}
+      <Contact /> 
     </div>
   );
 }
